@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-img {
+    background-image: url("/images/bg-mobile.png");
+    @apply bg-no-repeat bg-center bg-cover md:bg-bottom md:bg-contain;
+  }
+
+  .clip {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+  }
+
+  @media (min-width: 768px) {
+    .bg-img {
+      background-image: url("/images/bg-desktop.png");
+    }
+  }
+}
+
+.color {
+  color: #ff4d97;
+}
